@@ -3,7 +3,12 @@ interface SquareProps {
 }
 
 function Square({ value }: SquareProps) {
-    return <button className="square">{value}</button>;
+    function onClick() {
+        console.log(value);
+
+    }
+
+    return <button className="square" onClick={onClick}>{value}</button>;
 }
 
 export default function Board() {
